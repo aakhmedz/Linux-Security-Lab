@@ -69,21 +69,7 @@ Hardening index: XX [########      ]
 
 ---
 
-### Step 5 — Locate Detailed Report
-
-cat /var/log/lynis-report.dat 
-
-Optional:
-
-less /var/log/lynis.log 
-
-Example report output:
-
-![Lynis Report](../screenshots/day1/lynis-report.png)
-
----
-
-### Step 6 — Extract Relevant Findings
+### Step 5 — Extract Relevant Findings
 
 Common findings may include:
 
@@ -94,7 +80,7 @@ Common findings may include:
 
 ---
 
-### Step 7 — Apply Fixes (Optional)
+### Step 6 — Apply Fixes (Optional)
 
 Disable root login:
 

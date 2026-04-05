@@ -46,7 +46,6 @@ Once the cron job executes:
 Example:
 
 ![Reverse Shell](../screenshots/day4/reverse-shell.png)
-
 ---
 
 ### Step 4 — Identify Indicators of Persistence
