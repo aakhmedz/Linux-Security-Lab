@@ -113,10 +113,6 @@ sudo tail -f /var/log/auth.log
 
 ![Auth Log Monitoring](screenshots/day1/auth-log.png)
 
-![Lynis Audit Running](screenshots/day1/lynis-run.png)
-
-![Lynis Audit Summary](screenshots/day1/lynis-summary.png)
-
 --------------------------------------------------
 
 ## DAY 2 — Attack + Log Analysis
