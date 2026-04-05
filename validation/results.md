@@ -63,10 +63,6 @@ Look for:
 - Ban action triggered 
 - Blocked connection attempts 
 
-Example evidence:
-
-![Authentication Logs Showing Blocked Behavior](../screenshots/day5/auth-blocked.png)
-
 ---
 
 ### Step 5 — Validate Persistence Detection
