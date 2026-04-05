@@ -162,8 +162,9 @@ sudo systemctl restart ssh
 
 ### Screenshots
 
-![Fail2Ban Status](screenshots/day3/fail2ban-status.png)
-![Fail2Ban Config](screenshots/day3/fail2ban-config.png)
+![UFW Firewall Status](screenshots/day3/ufw-status.png)
+
+![Fail2Ban SSH Protection Active](screenshots/day3/fail2ban-status.png)
 
 --------------------------------------------------
 
@@ -182,8 +183,10 @@ ps aux
 
 ### Screenshots
 
-![Cron Job](screenshots/day4/cron-job.png)
-![Running Process](screenshots/day4/process.png)
+![Cron-Based Persistence Mechanism](screenshots/day4/cron-job.png)
+
+![Persistence Log Evidence](screenshots/day4/persistence-log.png)
+
 
 --------------------------------------------------
 
@@ -204,7 +207,7 @@ sudo aide --check
 
 ### Screenshots
 
-![AIDE Alert](screenshots/day4/aide-alert.png)
+![AIDE File Integrity Alert](screenshots/day4/aide-alert.png)
 
 --------------------------------------------------
 
@@ -221,8 +224,9 @@ hydra -l secureuser -P rockyou.txt ssh://<target-ip>
 
 ### Screenshots
 
-![Blocked Attack](screenshots/day5/blocked.png)
-![Fail2Ban Ban](screenshots/day5/fail2ban-ban.png)
+![Hydra Attack Blocked](screenshots/day5/hydra-blocked.png)
+
+![Fail2Ban Banned IP Confirmation](screenshots/day5/fail2ban-status.png)
 
 --------------------------------------------------
 
