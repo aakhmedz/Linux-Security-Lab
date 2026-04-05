@@ -47,7 +47,7 @@ Expected result:
 
 Example output:
 
-![Fail2Ban Status](../screenshots/day5/fail2ban-status.png)
+![Fail2Ban Banned IP Confirmation](../screenshots/day5/fail2ban-status.png)
 
 ---
 
@@ -65,7 +65,7 @@ Look for:
 
 Example evidence:
 
-![Blocked Auth Logs](../screenshots/day5/auth-blocked.png)
+![Authentication Logs Showing Blocked Behavior](../screenshots/day5/auth-blocked.png)
 
 ---
 
