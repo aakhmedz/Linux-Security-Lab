@@ -1,0 +1,155 @@
+## Setup
+
+### Objective
+
+The purpose of this phase is to build a controlled Linux environment that will be used to simulate attacks, monitor activity, and implement security controls.
+
+This environment serves as the foundation for all subsequent attack, detection, and defense activities.
+
+---
+
+### Environment Overview
+
+Component        Description
+---------------  --------------------------
+Target System    Ubuntu Server
+Attacker System  Kali Linux
+Access Method    SSH
+Network Type     Same network (VM or LAN)
+
+---
+
+### Step 1 — Install Ubuntu Server
+
+Install Ubuntu Server on a virtual machine (VirtualBox, VMware) or physical system.
+
+Recommended configuration:
+
+- 2 CPU cores  
+- 2 GB RAM (minimum)  
+- 20 GB storage  
+
+During installation:
+
+- Create a default user  
+- Enable OpenSSH server if prompted  
+
+---
+
+### Step 2 — Create Secure User
+
+Create a dedicated user for testing authentication and attack simulation.
+
+sudo adduser secureuser  
+
+Verify user creation:
+
+cat /etc/passwd | grep secureuser  
+
+Example output:
+
+secureuser:x:1001:1001:,,,:/home/secureuser:/bin/bash  
+
+---
+
+### Step 3 — Install and Enable SSH
+
+Ensure SSH service is installed and running.
+
+sudo apt update  
+sudo apt install openssh-server -y  
+
+Check service status:
+
+sudo systemctl status ssh  
+
+If not running:
+
+sudo systemctl start ssh  
+
+---
+
+### Step 4 — Identify Target IP Address
+
+Obtain the IP address of the Ubuntu server.
+
+ip a  
+
+Look for:
+
+inet <IP_ADDRESS>  
+
+Example:
+
+inet 192.168.0.15  
+
+---
+
+### Step 5 — Test SSH Connectivity
+
+From the attacker machine (Kali Linux), initiate an SSH connection:
+
+ssh secureuser@<target-ip>  
+
+Successful login confirms connectivity.
+
+Example login session:
+
+![SSH Login](../screenshots/day1/ssh-login.png)
+
+---
+
+### Step 6 — Enable Logging Visibility
+
+Monitor authentication logs in real time:
+
+sudo tail -f /var/log/auth.log  
+
+This allows observation of:
+
+- Successful login attempts  
+- Failed login attempts  
+- Source IP addresses  
+
+Example log output:
+
+![Auth Log Monitoring](../screenshots/day1/auth-log.png)
+
+---
+
+### Step 7 — Validate Logging Behavior
+
+Perform:
+
+- A successful login  
+- A failed login attempt  
+
+Verify logs update in real time.
+
+Expected entries:
+
+- Accepted password  
+- Failed password  
+
+---
+
+### Validation
+
+The setup phase is successful when:
+
+- SSH login works from the attacker system  
+- The secureuser account exists and authenticates correctly  
+- Logs are actively updating in /var/log/auth.log  
+- The system is reachable via IP  
+
+---
+
+### Outcome
+
+At the end of this phase, the environment includes:
+
+- A functioning Linux target system  
+- Remote access via SSH  
+- Real-time log visibility  
+
+This system is now prepared for attack simulation and security testing.
